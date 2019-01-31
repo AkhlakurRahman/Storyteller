@@ -1,0 +1,26 @@
+<h2>Stories</h2>
+
+<div class="row">
+	{{#each stories}}
+	<div class="col s12 m6">
+		<div class="card blue-grey darken-1">
+			<div class="card-image">
+				<a href="/stories/edit/{{id}}" class="btn-floating halfway-fab red">
+					<i class="fa fa-pencil"></i>
+				</a>
+			</div>
+			<div class="card-content white-text">
+				<span class="card-title">{{title}}</span>
+				<p class="story_text">{{stripTags (truncate story 150)}}</p>
+			</div>
+			<div class="card-action">
+				<div class="chip">
+					<img src="{{user.image}}" alt="Contact Person">
+					{{user.firstName}} {{user.lastName}}
+				</div>
+				<a href="/stories/show/{{id}}" class="btn grey right">Read More</a>
+			</div>
+		</div>
+	</div>
+	{{/each}}
+</div>

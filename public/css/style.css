@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.nav-wrapper .fa-bars {
+    font-size: 20px;
+}
+
+footer {
+    margin-top: 50vh;
+}
+
+.story_text {
+    height: 120px;
+}
+
+.status-dash {
+    text-transform: capitalize;
+}
+
+#delete-form {
+    display: inline;
+}
