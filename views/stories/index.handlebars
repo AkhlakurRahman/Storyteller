@@ -5,9 +5,9 @@
 	<div class="col s12 m6">
 		<div class="card blue-grey darken-1">
 			<div class="card-image">
-				<a href="/stories/edit/{{id}}" class="btn-floating halfway-fab red">
-					<i class="fa fa-pencil"></i>
-				</a>
+				{{#if user }}
+					{{{editIcon user.id ../user.id id}}}
+				{{/if}}
 			</div>
 			<div class="card-content white-text">
 				<span class="card-title">{{title}}</span>
@@ -16,7 +16,7 @@
 			<div class="card-action">
 				<div class="chip">
 					<img src="{{user.image}}" alt="Contact Person">
-					{{user.firstName}} {{user.lastName}}
+					<a href="/stories/user/{{user.id}}">{{user.firstName}} {{user.lastName}}</a>
 				</div>
 				<a href="/stories/show/{{id}}" class="btn grey right">Read More</a>
 			</div>
